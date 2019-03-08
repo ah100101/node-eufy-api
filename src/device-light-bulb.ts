@@ -98,7 +98,7 @@ export class LightBulb extends AbstractDevice {
 		return newValue;
 	}
 
-	private async setState(options: Partial<BulbState> & { power?: boolean }): Promise<void> {
+	async setState(options: Partial<BulbState> & { power?: boolean }): Promise<void> {
 		log.verbose('LightBulb.setState', 'Change to:', JSON.stringify(options));
 
 		if (this.state === undefined) {
